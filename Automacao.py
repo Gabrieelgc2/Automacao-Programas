@@ -20,21 +20,21 @@ def install_chocolatey():
     # Comando que instala e já tenta atualizar a sessão atual
     command = "Get-ExecutionPolicy"
     checkRestricted = subprocess.run(["powershell", "-Command", command], capture_output=True, text=True, shell=False)
-    if checkRestricted.returncode == 0:
-        print("Command executed successfully:")
+    if checkRestricted.returncode == 0: 
+        print("Comando executado com sucesso:")
         print(checkRestricted.stdout)
         subprocess.run(["powershell", "-Command", "Set-ExecutionPolicy AllSigned"], capture_output=True, text=True, shell=False)
     else:
-        print("Command failed to execute:")
+        print("Comando falhou ao ser executado:")
         print(checkRestricted.stderr)
 
     ExecuteChocolatey = subprocess.run(["powershell", "-Command", "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iwr https://community.chocolatey.org/install.ps1 -UseBasicParsing | iex"], capture_output=True, text=True, shell=True)
     if ExecuteChocolatey.returncode == 0:
-        print("Chocolatey installed successfully.")
+        print("Chocolatey instalado com sucesso.")
         Chocoversion = subprocess.run(["powershell", "-Command", "choco --version"], capture_output=True, text=True, shell=False)
-        print("Installed Chocolatey version: ", Chocoversion.stdout)
+        print("Versão do Chocolatey instalada: ", Chocoversion.stdout)
     else:
-        print("Failed to install Chocolatey.")
+        print("Falha ao instalar o Chocolatey.")
         print(ExecuteChocolatey.stderr)
         Chocoversion = subprocess.run(["powershell", "-Command", "choco --version"], capture_output=True, text=True, shell=False)
 
@@ -46,13 +46,13 @@ def install_programs():
     if os.path.exists(choco_path):
         print("Executando instalação via caminho absoluto...")
         
-        cmd = f"& '{choco_path}' install adobereader winrar office365business --yes"
+        cmd = f"& '{choco_path}' install adobereader winrar office365proplus --y -v"
         Programs = subprocess.run(["powershell", "-Command", cmd], shell=False)
         
         if Programs.returncode == 0:
-            print("Programs installed successfully.")
+            print("Programas instalados com sucesso.")
         else:
-            print("Failed to install some programs.")
+            print("Falha ao instalar alguns programas.")
     else:
         print("Erro: choco.exe não encontrado no diretório padrão.")
 

@@ -1,8 +1,11 @@
-import subprocess
-
-Chocoversion = subprocess.run(["powershell", "-Command", "choco --version"], capture_output=True, text=True, shell=False)
-if Chocoversion.returncode == 0:
-    print("Chocolatey is already installed. Version:")
-    print(Chocoversion.stdout)
-else:
-    print("Chocolatey is not installed")
+import pyautogui
+import time
+time.sleep(5)
+pyautogui.doubleClick(48, 346)
+time.sleep(2)
+pyautogui.typewrite("https://www.microsoft.com/en-us/microsoft-365/download-office#download")
+pyautogui.press('enter')
+time.sleep(5)
+pyautogui.click(574, 322)
+time.sleep(10)
+pyautogui.click(961, 163)
