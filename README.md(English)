@@ -5,6 +5,9 @@ Its main goal is to **automate repetitive and time-consuming tasks** usually per
 
 The script combines **PowerShell, Chocolatey, and GUI automation** to install essential software, remove unnecessary applications, and execute administrative commands in a standardized way.
 
+> 📘 **Portuguese version available:**  
+> [Portuguese Version](README.md)
+
 ---
 
 ## 🎯 Project Purpose
