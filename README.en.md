@@ -111,7 +111,7 @@ This allows:
 ---
 
 ## 📂 Project Structure
-
+````
 Automacao-Programas/
 ├── Automacao.py       # Main automation script
 ├── Automacao.spec     # PyInstaller configuration
@@ -120,6 +120,7 @@ Automacao-Programas/
 └── dist/
     └── Automacao.exe  # Final executable
 
+````
 
 ---
 
