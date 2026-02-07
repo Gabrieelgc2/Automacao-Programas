@@ -6,7 +6,7 @@ Seu objetivo é **automatizar tarefas repetitivas e demoradas** que normalmente 
 O script combina **PowerShell, Chocolatey e automação gráfica** para instalar softwares essenciais, remover aplicativos desnecessários e executar comandos administrativos de forma padronizada.
 
 > 📘 **English version available:**  
-> [English Version](README.md (English))
+> [English Version](README.md(English))
 
 ---
 
