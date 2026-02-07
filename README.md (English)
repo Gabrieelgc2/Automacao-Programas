@@ -1,0 +1,128 @@
+# Windows Setup Automation with Python
+
+This project is a **complete Windows setup automation**, developed in Python.  
+Its main goal is to **automate repetitive and time-consuming tasks** usually performed manually after installing Windows.
+
+The script combines **PowerShell, Chocolatey, and GUI automation** to install essential software, remove unnecessary applications, and execute administrative commands in a standardized way.
+
+---
+
+## 🎯 Project Purpose
+
+This project was created to:
+
+- Automate new computer setups
+- Reduce manual installation time
+- Standardize Windows environments
+- Demonstrate system automation using Python
+- Serve as a base for personal or enterprise setup tools
+
+---
+
+## ⚙️ How the Project Works
+
+The automation follows a clear step-by-step flow:
+
+1. Administrator permission verification
+2. PowerShell command execution
+3. Automatic software installation
+4. Removal of Windows built-in applications
+5. GUI automation when required
+6. Packaging the script into an executable (.exe)
+
+---
+
+## 🔐 Administrator Privileges
+
+At startup, the script checks if it is running with **Administrator privileges**.  
+If not, execution is stopped, since many operations require elevated access, such as:
+
+- Software installation
+- PowerShell command execution
+- Windows app removal
+
+---
+
+## 🧩 PowerShell Usage
+
+The project uses **PowerShell** to execute system-level commands, including:
+
+- Installing **Chocolatey**
+- Running administrative scripts
+- Managing software packages
+- Removing Windows built-in apps (bloatware)
+
+PowerShell commands are executed through Python using modules like `subprocess`, ensuring full automation and control.
+
+---
+
+## 📦 Chocolatey – Package Manager
+
+After the initial checks, the script automatically installs **Chocolatey**, a package manager for Windows.
+
+With Chocolatey, the project installs essential software silently, such as:
+
+- Google Chrome
+- Adobe Reader
+- WinRAR
+
+This removes the need for manual downloads and installation steps.
+
+---
+
+## 🧹 Windows Bloatware Removal
+
+The script removes unnecessary default Windows applications using PowerShell commands.
+
+This helps to:
+
+- Improve system performance
+- Reduce resource usage
+- Keep the environment clean and professional
+
+---
+
+## 🖱️ GUI Automation with PyAutoGUI
+
+For scenarios where terminal-based automation is not enough, the project uses **PyAutoGUI** to:
+
+- Simulate mouse clicks
+- Send keyboard inputs
+- Interact with windows and menus
+- Locate on-screen elements using image recognition (.png files)
+
+The images included in the project are used as visual references during automation.
+
+---
+
+## 🧪 Executable (.exe) Generation
+
+The project is packaged using **PyInstaller**, generating a standalone executable (`.exe`).
+
+This allows:
+
+- Running the project without Python installed
+- Using it on any Windows machine
+- Easy distribution of the automation tool
+
+---
+
+## 📂 Project Structure
+
+Automacao-Programas/
+├── Automacao.py # Main automation script
+├── Automacao.spec # PyInstaller configuration
+├── *.png # Images used for GUI automation
+├── build/ # Temporary build files
+├── dist/
+│ └── Automacao.exe # Final executable
+
+
+---
+
+## ⚠️ Important Notes
+
+- Windows-only project
+- Must be run as **Administrator**
+- Some automations depend on screen resolution and system language
+- Review and adapt the code before production use
