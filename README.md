@@ -112,13 +112,16 @@ Isso possibilita:
 
 ## 📂 Estrutura do Projeto
 
+````
 Automacao-Programas/
-├── Automacao.py # Script principal de automação
-├── Automacao.spec # Configuração do PyInstaller
-├── *.png # Imagens usadas na automação gráfica
-├── build/ # Arquivos temporários de compilação
-├── dist/
-│ └── Automacao.exe # Executável final
+├── Automacao.py       # Main automation script
+├── Automacao.spec     # PyInstaller configuration
+├── *.png              # Images used for GUI automation
+├── build/             # Temporary build files
+└── dist/
+    └── Automacao.exe  # Final executable
+
+````
 
 
 ---
