@@ -1,4 +1,4 @@
-# Windows Setup Automation with Python
+# Automação do Windows com Python
 
 Este projeto consiste em uma **automação completa para configuração inicial de sistemas Windows**, desenvolvida em Python.  
 Seu objetivo é **automatizar tarefas repetitivas e demoradas** que normalmente são realizadas manualmente após a instalação do Windows.
